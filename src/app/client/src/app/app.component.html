@@ -1,7 +1,7 @@
 <div [ngClass]="!layoutConfiguration ? 'footer-fix' : 'new-footer'">
   <app-desktop-app-update *appDesktopOnly></app-desktop-app-update>
   <div [ngClass]="{'loggedInUser': userService.loggedIn, 'guestUser': !userService.loggedIn}">
-    <div *ngIf="!isDesktopApp"
+    <!-- <div *ngIf="!isDesktopApp"
       class="sbt-container d-flex flex-ai-center sb-bg-color-black py-8 flex-w-wrap sbt-sticky-topbar sb-fontresizecontainer"
       [ngClass]="{'hide': isFullScreenView}">
       <div class="ui container">
@@ -58,7 +58,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <app-popup #frameWorkPopUp *ngIf="showFrameWorkPopUp" [buttonLabel]="resourceService.frmelmnts.btn.submit"
       (submit)="updateFrameWork($event)"></app-popup>
     <app-tnc-popup (close)="onAcceptTnc()" #termsAndCondPopUp *ngIf="showTermsAndCondPopUp">
@@ -102,7 +102,7 @@
 </sui-modal>
 
 <ng-container *ngIf="layoutConfiguration">
-  <svg width="332px" height="358px" viewBox="0 0 332 358" class="sbt-theme-bg-img computer only" version="1.1"
+  <!-- <svg width="332px" height="358px" viewBox="0 0 332 358" class="sbt-theme-bg-img computer only" version="1.1"
     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <g id="Illustration-&amp;-colour-palette-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
       <g id="Textbooks" transform="translate(106.000000, -390.000000)" class="st0">
@@ -113,8 +113,8 @@
         </g>
       </g>
     </g>
-  </svg>
+  </svg> -->
 </ng-container>
-<ng-container *ngIf="layoutConfiguration">
+<!-- <ng-container *ngIf="layoutConfiguration">
   <div class="sbt-theme-right-flower computer only"></div>
-</ng-container>
+</ng-container> -->
